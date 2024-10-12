@@ -29,6 +29,9 @@ app.use('/categories', categoriesRouter);
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
+const contactRouter = require('./routes/contact');
+app.use('/contact', contactRouter);
+
 app.listen(1003, () => {
     console.log('Server is running on port 1003')
 })
