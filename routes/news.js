@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const News = require('../models/news')
 
-router.post('/', async(req, res) => {
+router.post('/', async (req, res) => {
     const news = new News({
         email: req.body.email
     })
@@ -10,8 +10,8 @@ router.post('/', async(req, res) => {
         const newNews = await news.save()
         res.status(201).json(newNews)
     }
-    catch(error){
-        res.send('error' +error)
+    catch (error) {
+        res.send('error' + error)
     }
 })
 
