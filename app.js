@@ -32,9 +32,6 @@ app.use('/users', usersRouter);
 const contactRouter = require('./routes/contact');
 app.use('/contact', contactRouter);
 
-const singlebookRouter = require('./routes/singlebook');
-app.use('/singlebook', singlebookRouter);
-
 app.listen(1003, () => {
     console.log('Server is running on port 1003')
 })
