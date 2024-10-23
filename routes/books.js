@@ -25,9 +25,26 @@ router.post('/', async(req, res) => {
         author: req.body.author,
         description: req.body.description,
         image: req.body.image,
-        pub_date: req.body.pub_date
+        pub_date: req.body.pub_date,
+        l_id: req.body.l_id,
+        c_id: req.body.c_id,
     })
 
+    //   if (!languages) {
+    //     return res.status(404).json({ message: 'Language not found' });
+    //   }
+    //   if (!categories) {
+    //     return res.status(404).json({ message: 'Category not found' });
+    //   }
+  
+      // Create the new bookdata entry
+    //   const newBookdata = new Bookdata({
+    //     l_id,
+    //     c_id
+    //   });
+  
+    //   const savedBookdata = await newBookdata.save();
+    //   res.status(201).json(savedBookdata);
     try{
         const b1 = await books.save()
         res.json(books)
