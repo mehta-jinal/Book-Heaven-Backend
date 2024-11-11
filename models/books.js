@@ -31,6 +31,10 @@ const booksSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'categories', //fb to book table
         required: true
+    },
+    downloadLink: {
+        type: String,
+        required: true  
     }
 })
 
